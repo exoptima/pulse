@@ -12,7 +12,8 @@ phases:
   post_build:
     commands:
       - echo compress whole folder
-      - tar czf source.tar.gz .
+      - cd ..
+      - tar czf source.tar.gz financial-capture
       - echo coppy compress file into s3 bucket
       - aws s3 cp source.tar.gz s3://${S3_BUCKET}
 artifacts:
