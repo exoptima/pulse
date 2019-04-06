@@ -1,0 +1,22 @@
+version: 0.1
+phases:
+  pre_build:
+    commands:
+      - echo remove previous build and installing dependencies
+      - aws s3 rm s3://${S3_BUCKET}/build.tar.gz
+      - npm install
+  build:
+    commands:
+      - echo Build started
+      - npm run build
+  post_build:
+    commands:
+      - echo compress whole folder
+      - tar czf source.tar.gz .
+      - echo coppy compress file into s3 bucket
+      - aws s3 cp source.tar.gz s3://${S3_BUCKET}
+artifacts:
+  files:
+    - build.tar.gz
+    - appspec.yml
+  discard-paths: yes

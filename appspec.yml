@@ -1,0 +1,9 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ubuntu
+hooks:
+  beforeInstall:
+    - location: scripts/before-install.sh
+      runas: root
