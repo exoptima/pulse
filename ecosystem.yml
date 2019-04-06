@@ -1,0 +1,4 @@
+apps:
+  - name: 'financial-capture'
+    script: 'server/index.js'
+    watch: true
