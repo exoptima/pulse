@@ -7,6 +7,9 @@ hooks:
   beforeInstall:
     - location: scripts/before-install.sh
       runas: root
+  install:
+    - location: scripts/package-install.sh
+      runas: root
   applicationStart:
     - location: scripts/application-start.sh
       runas: root
