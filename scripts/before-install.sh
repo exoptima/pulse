@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-sudo rm -rf /home/ubuntu/*
+rm -rf /home/ubuntu/*
