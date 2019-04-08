@@ -1,0 +1,7 @@
+.VictoryContainer {
+    height: 100vh !important;
+}
+
+.VictoryContainer text tspan {
+    font-size: 5px !important;
+}
