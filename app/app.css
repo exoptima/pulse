@@ -1,7 +1,12 @@
-.VictoryContainer {
-    height: 100vh !important;
+.chart-container,
+.voronoi-container {
+  height: 500px;
+}
+
+.brush-control-container {
+  height: 200px;
 }
 
 .VictoryContainer text tspan {
-    font-size: 5px !important;
+  font-size: 7px !important;
 }
